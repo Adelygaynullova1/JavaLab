@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "web.pb";
+option java_multiple_files = true;
+
+service TenderService {
+  rpc GetWinnerCompany(Empty) returns (TenderResponse) {}
+}
+
+message Empty{
+
+}
+
+message TenderResponse {
+  string companyName = 1;
+}
